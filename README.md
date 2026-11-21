@@ -8,7 +8,8 @@ Highly available, scalable e-commerce backend on AWS: three Spring Boot microser
 | `cart-service/` | Spring Boot. Shopping cart on DynamoDB (with TTL for abandoned carts) |
 | `order-service/` | Spring Boot. Orders on Aurora MySQL; re-reads prices from product-service and clears the cart via ECS Service Connect |
 | `frontend/index.html` | Static storefront served from S3 through CloudFront |
-| [`AWS-CONSOLE-GUIDE.md`](AWS-CONSOLE-GUIDE.md) | Step-by-step console guide: account → network → security → data → ECS → CloudFront/WAF → monitoring |
+| [`ASSIGNMENT-LOW-COST-GUIDE.md`](ASSIGNMENT-LOW-COST-GUIDE.md) | **Start here.** Smallest-size deployment for the assignment review (~USD 3–5/day) plus a teardown checklist |
+| [`AWS-CONSOLE-GUIDE.md`](AWS-CONSOLE-GUIDE.md) | Full production-scale console guide (sale-ready sizing): account → network → security → data → ECS → CloudFront/WAF → monitoring |
 
 ## Architecture
 

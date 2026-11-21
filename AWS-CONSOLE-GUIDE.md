@@ -1,5 +1,7 @@
 # E-commerce on AWS: Console Build Guide (Sale-Ready)
 
+> **Deploying for the assignment review?** Use [ASSIGNMENT-LOW-COST-GUIDE.md](ASSIGNMENT-LOW-COST-GUIDE.md) instead. It has the same architecture at the smallest sizes, plus a teardown checklist. This file describes the production-scale setup.
+
 This is the order I would build it in. Every step uses the **AWS Management Console**. Do the steps in order, because later steps use resources from earlier ones.
 
 Conventions used below:
