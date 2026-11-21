@@ -1,0 +1,28 @@
+server:
+  port: 8082
+  shutdown: graceful
+
+spring:
+  application:
+    name: cart-service
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+
+app:
+  aws-region: ${AWS_REGION:us-east-1}
+  cart-table: ${CART_TABLE:ecom-carts}
+  cart-ttl-days: ${CART_TTL_DAYS:7}   # DynamoDB TTL deletes abandoned carts for free
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+logging:
+  pattern:
+    console: "%d{ISO8601} %-5level [${spring.application.name}] [%thread] %logger{36} - %msg%n"
